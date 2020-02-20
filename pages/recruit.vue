@@ -21,7 +21,7 @@ import axios from 'axios'
 export default {
   async asyncData () {
     const { data } = await axios.get(
-      'https://yasutomog.microcms.io/api/v1/careers',
+      'https://yasutomog.microcms.io/api/v1/menu',
       {
         headers: { 'X-API-KEY': process.env.API_KEY }
       }

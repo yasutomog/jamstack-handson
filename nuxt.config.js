@@ -96,5 +96,30 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  generate: {
+    routes() {
+      const careers = axios
+        .get("https://yasutomog.microcms.io/api/v1/menu", {
+          headers: { "X-API-KEY": process.env.API_KEY }
+        })
+        .then(res => {
+          return res.data.contents.map(career => {
+            return "/careers/" + career.id;
+          });
+        });
+      const posts = axios
+        .get("https://yasutomog.microcms.io/api/v1/menudetails", {
+          headers: { "X-API-KEY": process.env.API_KEY }
+        })
+        .then(res => {
+          return res.data.contents.map(post => {
+            return "/careers/posts/" + post.id;
+          });
+        });
+      return Promise.all([careers, posts]).then(values => {
+        return values.join().split(",");
+      });
+    }
   }
 }

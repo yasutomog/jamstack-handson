@@ -22,7 +22,7 @@ import axios from 'axios'
 export default {
   async asyncData ({ params }) {
     const { data } = await axios.get(
-      `https://yasutomog.microcms.io/api/v1/posts?filters=career[equals]${params.id}`,
+      `https://yasutomog.microcms.io/api/v1/menudetails?filters=menu[equals]${params.id}`,
       {
         headers: { 'X-API-KEY': process.env.API_KEY }
       }
@@ -31,8 +31,8 @@ export default {
     return {
       headers: [
         { text: 'ID', value: 'id' },
-        { text: 'TITLE', value: 'title' },
-        { text: 'INCOME', value: 'income' },
+        { text: 'NAME', value: 'name' },
+        { text: 'PRICE', value: 'price' },
         { text: 'CREATE', value: 'createdAt' },
         { text: 'UPDATE', value: 'updatedAt' }
       ],
