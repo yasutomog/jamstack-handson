@@ -18,6 +18,7 @@
               name="message"
               required
       ></v-text-field>
+      <div data-netlify-recaptcha="true"></div>
       <v-btn block color="secondary" dark type="submit">Send</v-btn>
     </v-form>
   </div>
