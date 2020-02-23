@@ -12,6 +12,7 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
+        <contact />
       </div>
       <v-card>
         <v-card-title class="headline">
@@ -90,11 +91,13 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Contact from '~/components/Form.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    Contact
   }
 }
 </script>

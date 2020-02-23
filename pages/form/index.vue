@@ -9,6 +9,9 @@ import Contact from '~/components/Form.vue'
 export default {
   components: {
     Contact
+  },
+  mounted () {
+    alert('test')
   }
 }
 </script>
