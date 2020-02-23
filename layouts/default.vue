@@ -14,6 +14,7 @@
           :to="item.to"
           router
           exact
+          :prefetch="false"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
