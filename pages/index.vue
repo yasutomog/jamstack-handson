@@ -64,6 +64,13 @@
           >
             Nuxt GitHub
           </a>
+          <br>
+          <a
+                  href="https://quirky-bhabha-84b9b0.netlify.com/form2.html"
+                  target="_blank"
+          >
+            Form2
+          </a>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
