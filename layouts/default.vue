@@ -116,6 +116,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Form',
           to: '/form'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Form2',
+          to: '/form2.html'
         }
       ],
       miniVariant: false,
